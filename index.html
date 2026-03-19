@@ -162,23 +162,22 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
-            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+            gap: 10px;
+            background: var(--red);
             color: #fff;
             text-decoration: none;
             font-family: var(--sans);
-            font-size: 1rem;
-            font-weight: 700;
-            letter-spacing: 1px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1.2px;
             text-transform: uppercase;
-            padding: 20px 38px;
-            border-radius: 4px;
+            padding: 15px 32px;
+            border-radius: 3px;
             width: 100%;
-            max-width: 520px;
-            border: 1px solid rgba(255,255,255,0.12);
+            max-width: 420px;
+            border: none;
             cursor: pointer;
-            transition: filter 0.25s, transform 0.25s;
-            animation: pulse-red 2.5s infinite;
+            transition: background 0.25s, transform 0.2s, opacity 0.2s;
             position: relative;
             overflow: hidden;
         }
@@ -186,10 +185,10 @@
             content: '';
             position: absolute; top: 0; left: -100%;
             width: 60%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
             transition: left 0.5s;
         }
-        .btn-cta:hover { filter: brightness(1.15); transform: translateY(-2px); }
+        .btn-cta:hover { background: var(--red-dark); transform: translateY(-1px); opacity: 0.95; }
         .btn-cta:hover::after { left: 150%; }
 
         .btn-cta-wrapper {
@@ -752,29 +751,32 @@
             display: none;
             position: fixed;
             bottom: 0; left: 0; right: 0;
-            background: var(--red-dark);
-            padding: 14px 20px;
+            background: rgba(10, 10, 10, 0.82);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-top: 1px solid rgba(255,255,255,0.07);
+            padding: 10px 18px 14px;
             z-index: 999;
-            box-shadow: 0 -4px 30px rgba(0,0,0,0.5);
         }
         .sticky-cta a {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 8px;
             background: var(--red);
             color: #fff;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 0.9rem;
-            letter-spacing: 0.8px;
+            font-weight: 600;
+            font-size: 0.78rem;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            padding: 16px;
-            border-radius: 4px;
+            padding: 12px 20px;
+            border-radius: 3px;
         }
+        .sticky-cta a i { font-size: 0.75rem; opacity: 0.85; }
         @media (max-width: 768px) {
             .sticky-cta { display: block; }
-            body { padding-bottom: 80px; }
+            body { padding-bottom: 70px; }
         }
 
         /* Fade in on scroll */
@@ -1121,7 +1123,7 @@
             </div>
 
             <div class="btn-cta-wrapper">
-                <a href="https://pay.kirvano.com/b0427bc2-c938-4e3a-8c15-daf4b2d72a34" class="btn-cta" style="background: linear-gradient(135deg, #c8102e, #8a0018); animation: pulse-red 2s infinite; max-width: 540px;">
+                <a href="https://pay.kirvano.com/b0427bc2-c938-4e3a-8c15-daf4b2d72a34" class="btn-cta" style="background: var(--red); max-width: 540px;">
                     Quero garantir meu acesso agora &nbsp;<i class="fas fa-arrow-right"></i>
                 </a>
                 <span class="btn-note" style="color:rgba(255,255,255,0.5);">
